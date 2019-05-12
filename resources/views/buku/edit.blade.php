@@ -9,7 +9,7 @@
     </div>
 
     @if ($errors->any())
-      <div class="alert alert-danger"> 
+      <div class="alert alert-danger">      
         <strong>Ups!</strong> there where some problem with your input.<br>
         <ul>
           @foreach ($errors as $error)
