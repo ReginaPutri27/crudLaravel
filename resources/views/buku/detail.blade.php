@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="form-group">
-          <strong>Judul Buku </strong> {{$buku->judul}}
+          <strong>Judul Buku : </strong> {{$buku->judul}}
         </div>
         <div class="form-group">
           <strong>Penerbit : </strong> {{$buku->penerbit}}
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="col-md-12">
-        <a href="{{route('buku.index')}}" class="btn btn-sm btn-success">Back</a>
+        <a href="{{route('buku.index')}}" class="btn btn-sm btn-success">Kembali</a>
       </div>
     </div>
   </div>

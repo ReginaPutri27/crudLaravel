@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h3>Create New Book List</h3>
+        <h3>Tambah Daftar Buku</h3>
       </div>
     </div>
 

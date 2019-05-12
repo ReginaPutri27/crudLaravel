@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Buku;
-
 class BukuController extends Controller
 {
     /**
@@ -18,7 +15,6 @@ class BukuController extends Controller
       return view('buku.index', compact('bukus'))
           ->with('i', (request()->input('page',1)-1)*5);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -28,7 +24,6 @@ class BukuController extends Controller
     {
         return view('buku.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -43,12 +38,10 @@ class BukuController extends Controller
         'tahun_terbit' => 'required',
         'pengarang' => 'required'
       ]);
-
       Buku::create($request->all());
       return redirect() -> route('buku.index')
                         -> with('success','New BookList Succesfully Created');
     }
-
     /**
      * Display the specified resource.
      *
@@ -60,7 +53,6 @@ class BukuController extends Controller
       $buku = Buku::find($id);
       return view ('buku.detail', compact('buku'));
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -72,7 +64,6 @@ class BukuController extends Controller
       $buku = Buku::find($id);
       return view ('buku.edit', compact('buku'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -88,17 +79,15 @@ class BukuController extends Controller
         'tahun_terbit' => 'required',
         'pengarang' => 'required'
       ]);
-
       $buku = Buku::find($id);
       $buku->judul = $request->get('judul');
       $buku->penerbit = $request->get('penerbit');
       $buku->tahun_terbit = $request->get('tahun_terbit');
       $buku->pengarang = $request->get('pengarang');
-
+      $buku->save();
       return redirect() -> route('buku.index')
                         -> with('success','New BookList Succesfully Updated');
     }
-
     /**
      * Remove the specified resource from storage.
      *

@@ -4,12 +4,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h3>Update Buku</h3>
+        <h3>Edit Buku</h3>
       </div>
     </div>
 
     @if ($errors->any())
-      <div class="alert alert-danger">
+      <div class="alert alert-danger"> 
         <strong>Ups!</strong> there where some problem with your input.<br>
         <ul>
           @foreach ($errors as $error)
@@ -40,8 +40,8 @@
           <input class="form-control" value="{{$buku->pengarang}}" name="pengarang">
         </div>
         <div class="col-md-12"><br>
-          <a href="{{route('buku.index')}}" class="btn btn-sm btn-success">Back</a>
-          <button type="submit" class="btn btn-sm btn-primary">Save</button>
+          <a href="{{route('buku.index')}}" class="btn btn-sm btn-success">Kembali</a>
+          <button type="submit" class="btn btn-sm btn-primary">Simpan</button>
         </div>
       </div>
     </form>
